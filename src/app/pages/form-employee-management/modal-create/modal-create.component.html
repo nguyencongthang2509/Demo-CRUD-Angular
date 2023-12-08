@@ -1,0 +1,30 @@
+<div>
+  <nz-row>
+    <nz-col [nzSpan]="12" style="padding: 5px">
+      <label>User Name:</label>
+      <input nz-input placeholder="Nhập username"/>
+    </nz-col>
+    <nz-col [nzSpan]="12" style="padding: 5px">
+      <label>Full Name:</label>
+      <input nz-input placeholder="Nhập họ và tên"/>
+    </nz-col>
+    <nz-col [nzSpan]="12" style="padding: 5px">
+      <label>Password:</label>
+      <input nz-input type="password" placeholder="**********"/>
+    </nz-col>
+    <nz-col [nzSpan]="12" style="padding: 5px">
+      <label>Tuổi:</label>
+      <input nz-input type="number" min="0" placeholder="Nhập tuổi"/>
+    </nz-col>
+    <nz-col [nzSpan]="24" style="padding: 5px">
+      <label>Address:</label>
+      <textarea nz-input rows="5" placeholder="Nhập địa chỉ"></textarea>
+    </nz-col>
+  </nz-row>
+  <div class="form-footer">
+    <div nz-space>
+      <button nz-button nzType="primary" (click)="create()" style="margin-right: 5px">Create</button>
+      <button nz-button (click)="handleCancel()">Cancel</button>
+    </div>
+  </div>
+</div>

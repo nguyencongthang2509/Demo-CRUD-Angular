@@ -1,0 +1,52 @@
+<div>
+  <div style="margin-bottom: 15px">
+    <div>
+      <input nz-input placeholder="Tìm kiếm theo username, họ và tên, địa chỉ" style="width: 30%"/>
+    </div>
+  </div>
+  <nz-row>
+    <nz-col nzSpan="12">
+      <h2><p>Form Employee Management</p></h2>
+    </nz-col>
+
+    <nz-col nzSpan="12" nzOffset="0" nzAlign="right">
+      <button nz-button nzType="primary" style="float: right" (click)="openModalCreate()">Add New</button>
+    </nz-col>
+  </nz-row>
+  <div [ngStyle]="{'max-height': 'calc(100vh - 200px)', 'overflow-y': 'auto'}">
+    <nz-table #employeeTable [nzData]="employees" [nzPageSize]="5">
+      <thead>
+      <tr>
+        <th nzWidth="50px">ID</th>
+        <th>User Name</th>
+        <th>Full Name</th>
+        <th>Password</th>
+        <th>Address</th>
+        <th nzWidth="80px">Age</th>
+        <th nzWidth="200px">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let employee of employeeTable.data">
+        <td>{{ employee.Id }}</td>
+        <td>{{ employee.UserName }}</td>
+        <td>{{ employee.FullName }}</td>
+        <td>{{ employee.Password }}</td>
+        <td>{{ employee.Address }}</td>
+        <td>{{ employee.Age }}</td>
+        <td>
+          <button nz-button nzType="link" nzTooltipTitle="Xem chi tiết" nz-tooltip>
+            <i nz-icon nzType="eye" nzTheme="outline"></i>
+          </button>
+          <button nz-button nzType="link" nzTooltipTitle="Cập nhật" nz-tooltip>
+            <i nz-icon nzType="edit" nzTheme="outline"></i>
+          </button>
+          <button nz-button nzType="link" nzTooltipTitle="Xóa" nz-tooltip>
+            <i nz-icon nzType="delete" nzTheme="outline"></i>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </nz-table>
+  </div>
+</div>
