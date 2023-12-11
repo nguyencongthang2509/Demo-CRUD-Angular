@@ -1,1 +1,29 @@
-<p>modal-detail works!</p>
+<div>
+  <nz-row>
+    <nz-col [nzSpan]="12" style="padding: 5px">
+      <label>User Name:</label>
+      <input readonly nz-input placeholder="Nhập username" [(ngModel)]="employee.UserName" name="userName"/>
+    </nz-col>
+    <nz-col [nzSpan]="12" style="padding: 5px">
+      <label>Full Name:</label>
+      <input readonly nz-input placeholder="Nhập họ và tên" [(ngModel)]="employee.FullName" name="fullName"/>
+    </nz-col>
+    <nz-col [nzSpan]="12" style="padding: 5px">
+      <label>Password:</label>
+      <input readonly nz-input type="password" placeholder="**********" [(ngModel)]="employee.Password" name="password"/>
+    </nz-col>
+    <nz-col [nzSpan]="12" style="padding: 5px">
+      <label>Tuổi:</label>
+      <input readonly nz-input type="number" min="0" placeholder="Nhập tuổi" [(ngModel)]="employee.Age" name="age"/>
+    </nz-col>
+    <nz-col [nzSpan]="24" style="padding: 5px">
+      <label>Address:</label>
+      <textarea readonly nz-input rows="5" placeholder="Nhập địa chỉ" [(ngModel)]="employee.Address" name="address"></textarea>
+    </nz-col>
+  </nz-row>
+  <div class="form-footer">
+    <div nz-space>
+      <button nz-button (click)="handleCancel()">Cancel</button>
+    </div>
+  </div>
+</div>

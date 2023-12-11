@@ -2,23 +2,28 @@
   <nz-row>
     <nz-col [nzSpan]="12" style="padding: 5px">
       <label>User Name:</label>
-      <input nz-input placeholder="Nhập username"/>
+      <input nz-input placeholder="Nhập username" [(ngModel)]="employee.UserName" name="userName"/>
+      <span style="color: red">{{ errorUsername }}</span>
     </nz-col>
     <nz-col [nzSpan]="12" style="padding: 5px">
       <label>Full Name:</label>
-      <input nz-input placeholder="Nhập họ và tên"/>
+      <input nz-input placeholder="Nhập họ và tên" [(ngModel)]="employee.FullName" name="fullName"/>
+      <span style="color: red">{{ errorFullName }}</span>
     </nz-col>
     <nz-col [nzSpan]="12" style="padding: 5px">
       <label>Password:</label>
-      <input nz-input type="password" placeholder="**********"/>
+      <input nz-input type="password" placeholder="**********" [(ngModel)]="employee.Password" name="password"/>
+      <span style="color: red">{{ errorPassword }}</span>
     </nz-col>
     <nz-col [nzSpan]="12" style="padding: 5px">
       <label>Tuổi:</label>
-      <input nz-input type="number" min="0" placeholder="Nhập tuổi"/>
+      <input nz-input type="number" min="0" placeholder="Nhập tuổi" [(ngModel)]="employee.Age" name="age"/>
+      <span style="color: red">{{ errorAge }}</span>
     </nz-col>
     <nz-col [nzSpan]="24" style="padding: 5px">
       <label>Address:</label>
-      <textarea nz-input rows="5" placeholder="Nhập địa chỉ"></textarea>
+      <textarea nz-input rows="5" placeholder="Nhập địa chỉ" [(ngModel)]="employee.Address" name="address"></textarea>
+      <span style="color: red">{{ errorAddress }}</span>
     </nz-col>
   </nz-row>
   <div class="form-footer">

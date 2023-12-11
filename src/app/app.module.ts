@@ -21,6 +21,7 @@ import {ModalUpdateComponent} from "./pages/form-employee-management/modal-updat
 import {NzModalModule} from "ng-zorro-antd/modal";
 import {NzInputModule} from "ng-zorro-antd/input";
 import {NzSpaceModule} from "ng-zorro-antd/space";
+import {FormsModule} from "@angular/forms";
 
 const icons = [DashboardOutline, MenuFoldOutline, FormOutline];
 
@@ -50,7 +51,8 @@ const icons = [DashboardOutline, MenuFoldOutline, FormOutline];
     NzTypographyModule,
     NzModalModule,
     NzInputModule,
-    NzSpaceModule
+    NzSpaceModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
